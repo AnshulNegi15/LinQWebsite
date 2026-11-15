@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Staff API and local credentials
+.env*
+!.env.example
