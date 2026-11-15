@@ -18,7 +18,6 @@ import Footer from './components/Footer';
 export default function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home' | 'terms' | 'privacy'
   const [authModalOpen, setAuthModalOpen] = useState(false);
-  const [authModalMode, setAuthModalMode] = useState('login');
 
   // Handle URL hash routing (e.g., #terms or #privacy)
   useEffect(() => {
@@ -39,7 +38,10 @@ export default function App() {
   }, []);
 
   const openAuthModal = (mode = 'login') => {
-    setAuthModalMode(mode);
+    if (mode === 'login') {
+      window.location.assign('/admin');
+      return;
+    }
     setAuthModalOpen(true);
   };
 
@@ -104,7 +106,7 @@ export default function App() {
       {/* Global Interactive Auth Modal */}
       <AuthModal 
         isOpen={authModalOpen}
-        initialMode={authModalMode}
+        initialMode="signup"
         onClose={closeAuthModal}
       />
 
