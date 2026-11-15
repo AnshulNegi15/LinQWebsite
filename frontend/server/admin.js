@@ -43,9 +43,7 @@ async function identify(request, db) {
   if (result.error || !user || user.is_anonymous) return { error: json({ error: 'Your session has expired.' }, 401) };
   const staff = unwrap(await db.from('dashboard_staff').select('role').eq('user_id', user.id).maybeSingle());
   if (!staff) return { error: json({ error: 'This account has no staff access.' }, 403) };
-  // Supabase has verified the same token above. Never accept a role or assurance level from request parameters.
-  const claims = JSON.parse(Buffer.from(token.split('.')[1], 'base64url').toString('utf8'));
-  return { id: user.id, role: staff.role, mfa: claims.aal === 'aal2' };
+  return { id: user.id, role: staff.role };
 }
 
 async function bookmarkIssueReasons(db, rows) {
@@ -158,9 +156,9 @@ export async function handleAdmin(request) {
     const db = database();
     const staff = await identify(request, db);
     if (staff.error) return staff.error;
-    if (view === 'access') return json({ role: staff.role, mfa: staff.mfa, id: staff.id, environment: process.env.ADMIN_ENVIRONMENT || null,
+    if (view === 'access') return json({ role: staff.role, id: staff.id, environment: process.env.ADMIN_ENVIRONMENT || null,
       enforcement: staff.role === 'admin' && process.env.DASHBOARD_REPORT_ENFORCEMENT === 'true' });
-    if (!staff.mfa || !permissions[view].includes(staff.role)) return json({ error: 'This action requires staff permission and MFA.' }, 403);
+    if (!permissions[view].includes(staff.role)) return json({ error: 'This action requires staff permission.' }, 403);
     if (request.method === 'PATCH') return await update(db, view, staff, request);
     if (view === 'reports' && params.get('counts') === 'true') {
       return json(unwrap(await db.rpc('dashboard_report_counts')));

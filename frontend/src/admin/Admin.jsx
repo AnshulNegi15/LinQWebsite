@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import { QueryClient, QueryClientProvider, useQuery, useQueryClient } from '@tanstack/react-query';
-import { Activity, ArrowDownToLine, ArrowLeft, ArrowRight, Bookmark, ChevronDown, CircleHelp, Flag,
-  Inbox, LayoutGrid, LogOut, RefreshCw, Search, ShieldCheck, Users, X } from 'lucide-react';
+import { Activity, ArrowDownToLine, ArrowLeft, ArrowRight, Bookmark, ChevronDown, CircleHelp, Eye, EyeOff, Flag,
+  Inbox, LayoutGrid, LogOut, RefreshCw, Search, Users, X } from 'lucide-react';
 import '@fontsource-variable/geist';
 import './admin.css';
 
@@ -117,81 +117,60 @@ function Notice({ children, error = false }) {
 function SignIn() {
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
   async function submit(event) {
     event.preventDefault();
-    if (!supabase) return;
+    if (!supabase || busy) return;
     const fields = new FormData(event.currentTarget);
     setBusy(true);
     setError('');
     try {
-      const result = await supabase.auth.signInWithPassword({ email: fields.get('email'), password: fields.get('password') });
+      const result = await supabase.auth.signInWithPassword({
+        email: fields.get('email').trim(),
+        password: fields.get('password'),
+      });
       if (result.error) setError(result.error.message);
-    } catch { setError('Could not reach sign-in. Try again.'); }
-    finally { setBusy(false); }
+    } catch {
+      setError('Could not reach sign-in. Try again.');
+    } finally {
+      setBusy(false);
+    }
   }
-  return <div className="la-gate"><div className="la-gate-panel">
-    <Brand /><h1>Admin sign-in</h1><p>Use your LinQ staff account to open the workspace.</p>
-    {supabase ? <form onSubmit={submit}>
-      <label>Email<input name="email" type="email" autoComplete="username" required /></label>
-      <label>Password<input name="password" type="password" autoComplete="current-password" required /></label>
+
+  return <main className="la-gate"><section className="la-gate-panel" aria-labelledby="sign-in-title">
+    <Brand />
+    <h1 id="sign-in-title">Sign in</h1>
+    <p>Open your LinQ dashboard.</p>
+    {supabase ? <form className="la-sign-in" onSubmit={submit} aria-busy={busy}>
+      <label htmlFor="sign-in-email">Email
+        <input id="sign-in-email" name="email" type="email" autoComplete="username" required />
+      </label>
+      <div className="la-password-field">
+        <label htmlFor="sign-in-password">Password</label>
+        <div className="la-password-input">
+          <input id="sign-in-password" name="password" type={showPassword ? 'text' : 'password'}
+            autoComplete="current-password" required />
+          <button type="button" onClick={() => setShowPassword(visible => !visible)}
+            aria-label={showPassword ? 'Hide password' : 'Show password'}>
+            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+          </button>
+        </div>
+      </div>
       {error && <Notice error>{error}</Notice>}
-      <button className="la-primary" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'} <ArrowRight size={16} /></button>
-    </form> : <Notice>Connect the website to Supabase to enable staff sign-in.</Notice>}
-    <a href="/"><ArrowLeft size={15} /> Back to LinQ</a>
-  </div></div>;
+      <button className="la-primary" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'} <ArrowRight size={16} aria-hidden="true" /></button>
+    </form> : <Notice error>Sign-in is currently unavailable.</Notice>}
+    <a href="/"><ArrowLeft size={15} aria-hidden="true" /> Back to LinQ</a>
+  </section></main>;
 }
 
-function TwoFactor() {
-  const [factor, setFactor] = useState(null);
-  const [loaded, setLoaded] = useState(false);
-  const [error, setError] = useState('');
-  const [busy, setBusy] = useState(false);
-  useEffect(() => {
-    let active = true;
-    supabase.auth.mfa.listFactors().then(result => {
-      if (!active) return;
-      if (result.error) setError(result.error.message);
-      else setFactor(result.data.totp.find(item => item.status === 'verified') || null);
-      setLoaded(!result.error);
-    }).catch(() => { if (active) setError('Could not load authentication factors.'); });
-    return () => { active = false; };
-  }, []);
-  async function enroll() {
-    setBusy(true);
-    setError('');
-    try {
-      const result = await supabase.auth.mfa.enroll({ factorType: 'totp' });
-      if (result.error) throw result.error;
-      setFactor(result.data);
-    } catch (failure) { setError(failure.message); }
-    finally { setBusy(false); }
-  }
-  async function verify(event) {
-    event.preventDefault();
-    setBusy(true);
-    setError('');
-    try {
-      const result = await supabase.auth.mfa.challengeAndVerify({
-        factorId: factor.id, code: new FormData(event.currentTarget).get('code'),
-      });
-      if (result.error) throw result.error;
-    } catch (failure) { setError(failure.message); }
-    finally { setBusy(false); }
-  }
-  return <div className="la-gate"><div className="la-gate-panel"><Brand />
-    <h1>Two-factor verification</h1>
-    <p>{factor ? 'Enter the six-digit code from your authenticator.' : 'An authenticator protects access to LinQ staff data.'}</p>
-    {factor?.totp && <div className="la-enroll">
-      {factor.totp.qr_code?.startsWith('data:image/svg+xml;') && <img src={factor.totp.qr_code} alt="Authenticator enrollment QR code" />}
-      <p>Scan the code or enter this setup key in your authenticator.</p><code>{factor.totp.secret}</code>
-    </div>}
-    {error && <Notice error>{error}</Notice>}
-    {factor ? <form onSubmit={verify}><label>Verification code<input name="code" autoComplete="one-time-code"
-      inputMode="numeric" maxLength={6} pattern="[0-9]{6}" required /></label>
-      <button className="la-primary" disabled={busy}>Verify code <ShieldCheck size={17} /></button></form>
-      : <button className="la-primary" onClick={enroll} disabled={!loaded || busy}>Set up authenticator</button>}
-    <button className="la-link-button" onClick={() => supabase.auth.signOut()}>Sign out</button>
-  </div></div>;
+function WorkspaceLoading({ checkingAccess = false }) {
+  return <main className="la-gate"><section className="la-gate-panel la-gate-loading" aria-labelledby="workspace-loading-title">
+    <Brand />
+    <h1 id="workspace-loading-title">Opening LinQ</h1>
+    <p role="status">{checkingAccess ? 'Checking your dashboard access…' : 'Restoring your session…'}</p>
+    <progress aria-label="Loading the LinQ dashboard" />
+  </section></main>;
 }
 
 function Metrics({ items }) {
@@ -777,7 +756,7 @@ function AdminGate() {
     document.title = 'LinQ Admin';
     if (!supabase) return;
     const { data } = supabase.auth.onAuthStateChange((event, next) => {
-      if (['SIGNED_OUT', 'MFA_CHALLENGE_VERIFIED'].includes(event)) {
+      if (event === 'SIGNED_OUT') {
         client.removeQueries({ queryKey: ['access'] });
         setIdentity(value => value + 1);
       }
@@ -791,13 +770,12 @@ function AdminGate() {
     queryFn: ({ signal }) => api(token, { view: 'access' }, undefined, signal),
     enabled: Boolean(token),
   });
-  if (session === undefined) return <div className="la-gate"><Notice>Checking session…</Notice></div>;
+  if (session === undefined) return <WorkspaceLoading />;
   if (!session) return <SignIn />;
   if (access.error && (!access.data || accessDenied(access.error))) return <div className="la-gate"><div className="la-gate-panel"><Brand /><h1>Admin access</h1>
     <Notice error>{access.error.message}</Notice><div className="la-actions"><button className="la-button" onClick={() => { void access.refetch(); }}>Try again</button>
     <button className="la-button" onClick={() => supabase.auth.signOut()}>Sign out</button></div></div></div>;
-  if (!access.data) return <div className="la-gate"><Notice>Checking staff access…</Notice></div>;
-  if (!access.data.mfa) return <TwoFactor />;
+  if (!access.data) return <WorkspaceLoading checkingAccess />;
   return <Workspace key={session.user.id + ':' + identity + ':' + access.data.role} token={token} access={access.data} />;
 }
 
