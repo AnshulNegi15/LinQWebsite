@@ -1,6 +1,6 @@
 # LinQ admin workspace
 
-The dashboard lives at `/admin`. Staff sign in with a Supabase account and verify an authenticator code before loading dashboard data. A staff account can enroll its authenticator after the server checks its access.
+The dashboard lives at `/admin`. Staff sign in with their Supabase email and password. The server verifies the session and checks the staff role before loading dashboard data.
 
 1. In Vercel, confirm this repository’s **Root Directory** is `frontend`. Build with `npm run build` and use `dist` as the output directory. Copy the names in [frontend/.env.example](frontend/.env.example) to the preview project. Set the browser and server Supabase URLs to LinQ-org, and keep the environment label as **Testing**. Use the same project for both keys. The service role key belongs only in the server environment.
 2. Review and apply [the migration](supabase/migrations/20261114090000_admin_dashboard.sql) to LinQ-org. It assumes the existing LinQ Auth, bookmarks, Spaces and link-report schema. The migration runs in a transaction. Add staff by their Supabase Auth UUID through the SQL editor. `admin` has access to all sections. `analyst` can view aggregates, `support` can also manage cases, and `moderator` can also review reported links. A Space role does not grant website access.
@@ -11,7 +11,7 @@ The dashboard lives at `/admin`. Staff sign in with a Supabase account and verif
    ```
 
 3. For support intake, set up a Resend receiving address and route incoming `support@trylinq.tech` mail to it using your current mail provider. Keep the existing inbox reachable for replies. Set the receiving address as `SUPPORT_INBOUND_ADDRESS`, then configure Resend to send the **email.received** event to `/api/support-inbound`. Set the server API key and the signing secret for this endpoint in Vercel. Send a test message, redeliver the webhook, and confirm there is one case. Test a threaded reply using the original `Message-ID` or `References`. If your forwarding changes the sender or message headers, configure it to preserve them before using the inbox.
-4. Preview with one authorized staff account and one ordinary app account. Check logged-out access, rejection of the ordinary account, a staff login requiring MFA, role-specific API access, case updates, and report updates. Compare dashboard totals with Supabase for the same UTC date range.
+4. Preview with one authorized staff account and one ordinary app account. Check logged-out access, rejection of the ordinary account, staff sign-in with email and password, role-specific API access, case updates, and report updates. Compare dashboard totals with Supabase for the same UTC date range.
 
 For local testing, copy `frontend/.env.example` to `frontend/.env.local` if the file is absent. Set both Supabase URLs, the publishable key, and the server key there, then restart `npm run dev` from `frontend`. It serves both the site and admin API at [127.0.0.1:5173/admin](http://127.0.0.1:5173/admin). LinQ-org already has all five dashboard migrations. Apply them in order only when setting up another compatible project. Add a staff role for an existing app account before signing in.
 
@@ -48,7 +48,7 @@ The importer accepts TSV and gzip files. Submit each segment once for that impor
 
 Apply [Bookmarks and Spaces](supabase/migrations/20261114101000_dashboard_bookmarks_spaces.sql)
 after the moderation and analytics migrations. Overview shows repeat saving and links to open work.
-Bookmarks and Spaces require the admin or analyst role and MFA. App Store appears in navigation
+Bookmarks and Spaces require the admin or analyst role. App Store appears in navigation
 once at least one actual Apple report has been imported.
 
 The bookmark operations view groups the stored source into known platform categories. It returns

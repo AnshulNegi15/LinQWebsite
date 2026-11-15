@@ -118,14 +118,28 @@ textarea { resize: vertical; }
 .la-review-url { flex-basis: 100%; min-width: 0; }
 .la-notice { background: #edf3fc; border: 1px solid #d9e5f7; border-radius: 7px; padding: 12px 14px; color: #344c70; margin-bottom: 12px; font-size: .9rem; }
 .la-notice.error { background: #fff0ef; color: #852c28; border-color: #f2d4d1; }
-.la-gate { display: grid; min-height: 100dvh; place-items: center; padding: 20px; background: #eef3fa; }
-.la-gate-panel { width: min(100%, 420px); border-radius: 14px; background: #fff; border: 1px solid var(--line); padding: 30px; }
-.la-gate h1 { margin-top: 27px; font-size: 2rem; }
-.la-gate form, .la-gate .la-notice, .la-gate-panel > .la-primary { margin-top: 18px; }
-.la-gate-panel > a, .la-gate-panel > .la-link-button { display: inline-flex; align-items: center; gap: 5px; margin-top: 19px; font-size: .85rem; }
-.la-enroll { margin-top: 14px; overflow-wrap: anywhere; }
-.la-enroll img { width: 155px; max-width: 100%; }
-.la-enroll code { display: inline-block; padding: 5px; background: #eff4fb; }
+.la-gate { display: grid; min-height: 100dvh; place-items: center; padding: 20px; background: #f3f6fa; }
+.la-gate-panel { width: min(100%, 420px); border-radius: 18px; background: #fff; border: 1px solid var(--line);
+  padding: clamp(24px, 5vw, 36px); box-shadow: 0 16px 54px #18283e12; }
+.la-gate h1 { margin-top: 26px; font-size: 2.1rem; }
+.la-gate form, .la-gate .la-notice { margin-top: 22px; }
+.la-gate-panel > a { display: inline-flex; align-items: center; gap: 6px; margin-top: 23px; font-size: .83rem; text-decoration: none; }
+.la-gate-panel > a:hover { text-decoration: underline; }
+.la-gate .la-sign-in { gap: 16px; }
+.la-sign-in input:not([type=checkbox]), .la-sign-in .la-primary { min-height: 46px; border-radius: 9px; }
+.la-sign-in input:not([type=checkbox]) { padding-inline: 12px; font-size: 1rem; }
+.la-sign-in .la-primary { margin-top: 2px; }
+.la-sign-in .la-notice { margin: 0; }
+.la-password-field { display: grid; gap: 6px; }
+.la-password-input { position: relative; }
+.la-password-input input:not([type=checkbox]) { width: 100%; padding-inline-end: 50px; }
+.la-password-input button { position: absolute; inset: 2px 2px 2px auto; width: 44px; display: grid; place-items: center;
+  background: transparent; border: 0; border-radius: 7px; color: var(--dim); }
+.la-password-input button:hover { background: var(--soft-blue); }
+.la-gate-loading { text-align: center; }
+.la-gate-loading .la-brand { justify-content: center; }
+.la-gate-loading h1 { font-size: 1.55rem; }
+.la-gate-loading progress { display: block; width: 112px; height: 6px; margin: 22px auto 0; accent-color: var(--blue); }
 @media (max-width: 1000px) {
   .la-page-head { align-items: start; flex-direction: column; }
 }
