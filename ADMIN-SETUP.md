@@ -2,7 +2,7 @@
 
 The dashboard lives at `/admin`. Staff sign in with their Supabase email and password. The server verifies the session and checks the staff role before loading dashboard data.
 
-1. In Vercel, confirm this repository’s **Root Directory** is `frontend`. Build with `npm run build` and use `dist` as the output directory. Copy the names in [frontend/.env.example](frontend/.env.example) to the preview project. Set the browser and server Supabase URLs to LinQ-org, and keep the environment label as **Testing**. Use the same project for both keys. The service role key belongs only in the server environment.
+1. In Vercel, confirm this repository’s **Root Directory** is `frontend`. Build with `npm run build` and use `dist` as the output directory. Copy the names in [frontend/.env.example](frontend/.env.example) to the preview project. Set VITE_SUPABASE_URL to LinQ-org. The server uses it as a fallback if SUPABASE_URL is unset. Set SUPABASE_URL to the same project if you provide it. Keep the environment label as **Testing**. Use the same project for both keys. The service role key belongs only in the server environment.
 2. Review and apply [the migration](supabase/migrations/20261114090000_admin_dashboard.sql) to LinQ-org. It assumes the existing LinQ Auth, bookmarks, Spaces and link-report schema. The migration runs in a transaction. Add staff by their Supabase Auth UUID through the SQL editor. `admin` has access to all sections. `analyst` can view aggregates, `support` can also manage cases, and `moderator` can also review reported links. A Space role does not grant website access.
 
    ```sql

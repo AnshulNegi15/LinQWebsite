@@ -20,8 +20,12 @@ export const json = (data, status = 200) => Response.json(data, {
   status, headers: { 'Cache-Control': 'private, no-store' },
 });
 
+function supabaseUrl() {
+  return process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+}
+
 export function database() {
-  const url = process.env.SUPABASE_URL;
+  const url = supabaseUrl();
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) throw new Error('Missing server database configuration');
   return createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
@@ -37,7 +41,7 @@ async function identify(request, db) {
   if (!token || token.length > 8192) return { error: json({ error: 'Sign in to continue.' }, 401) };
   const key = process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
   if (!key) throw new Error('Missing public authentication key');
-  const auth = createClient(process.env.SUPABASE_URL, key, { auth: { persistSession: false, autoRefreshToken: false } });
+  const auth = createClient(supabaseUrl(), key, { auth: { persistSession: false, autoRefreshToken: false } });
   const result = await auth.auth.getUser(token);
   const user = result.data?.user;
   if (result.error || !user || user.is_anonymous) return { error: json({ error: 'Your session has expired.' }, 401) };
@@ -150,8 +154,14 @@ export async function handleAdmin(request) {
     if (view !== 'access' && !Object.hasOwn(permissions, view)) return json({ error: 'Page not found.' }, 404);
     if (view === 'access' && request.method !== 'GET') return json({ error: 'Method unavailable.' }, 405);
     if (!request.headers.has('authorization')) return json({ error: 'Sign in to continue.' }, 401);
-    if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY || !process.env.VITE_SUPABASE_PUBLISHABLE_KEY) {
-      return json({ error: 'The server is missing its Supabase configuration.' }, 503);
+    const missing = [
+      !supabaseUrl() && 'SUPABASE_URL or VITE_SUPABASE_URL',
+      !process.env.SUPABASE_SERVICE_ROLE_KEY && 'SUPABASE_SERVICE_ROLE_KEY',
+      !process.env.VITE_SUPABASE_PUBLISHABLE_KEY && 'VITE_SUPABASE_PUBLISHABLE_KEY',
+    ].filter(Boolean);
+    if (missing.length) {
+      console.error('Missing admin Supabase configuration:', missing.join(', '));
+      return json({ error: 'The dashboard cannot verify access until its server configuration is complete. Contact the site administrator.' }, 503);
     }
     const db = database();
     const staff = await identify(request, db);

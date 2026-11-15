@@ -43,12 +43,13 @@ async function api(token, params = {}, payload, signal) {
     headers: { Authorization: 'Bearer ' + token, ...(payload && { 'Content-Type': 'application/json' }) },
     ...(payload && { method: 'PATCH', body: JSON.stringify(payload) }),
   });
-  const data = await response.json().catch(() => ({}));
+  const data = await response.json().catch(() => null);
   if (!response.ok) {
-    const error = new Error(data.error || 'The admin API is unavailable.');
+    const error = new Error(data?.error || 'The admin API is unavailable.');
     error.status = response.status;
     throw error;
   }
+  if (!data) throw new Error('The admin API returned an unexpected response. Try again.');
   return data;
 }
 
@@ -114,7 +115,7 @@ function Notice({ children, error = false }) {
   return <div className={'la-notice' + (error ? ' error' : '')} role={error ? 'alert' : 'status'}>{children}</div>;
 }
 
-function SignIn() {
+function SignIn({ onSignedIn }) {
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -130,7 +131,13 @@ function SignIn() {
         email: fields.get('email').trim(),
         password: fields.get('password'),
       });
-      if (result.error) setError(result.error.message);
+      if (result.error) {
+        setError(result.error.message);
+      } else if (result.data.session) {
+        onSignedIn(result.data.session);
+      } else {
+        setError('Sign-in did not return a session. Try again.');
+      }
     } catch {
       setError('Could not reach sign-in. Try again.');
     } finally {
@@ -771,7 +778,7 @@ function AdminGate() {
     enabled: Boolean(token),
   });
   if (session === undefined) return <WorkspaceLoading />;
-  if (!session) return <SignIn />;
+  if (!session) return <SignIn onSignedIn={setSession} />;
   if (access.error && (!access.data || accessDenied(access.error))) return <div className="la-gate"><div className="la-gate-panel"><Brand /><h1>Admin access</h1>
     <Notice error>{access.error.message}</Notice><div className="la-actions"><button className="la-button" onClick={() => { void access.refetch(); }}>Try again</button>
     <button className="la-button" onClick={() => supabase.auth.signOut()}>Sign out</button></div></div></div>;
