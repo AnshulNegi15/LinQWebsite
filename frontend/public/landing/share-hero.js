@@ -1,3 +1,5 @@
+const landingAssets = new URL('assets/', document.currentScript.src);
+
 function initializeDemo(stage) {
   const find = (selector) => stage.querySelector(selector);
   const screen = find('.demo-screen');
@@ -23,10 +25,10 @@ function initializeDemo(stage) {
     { id: 'reddit', name: 'Reddit', logo: 'reddit.svg', title: 'A question about two kittens', domain: 'reddit.com', post: 'reddit-post.webp', theme: 'light' },
   ];
   const icon = (name) => `<svg focusable="false"><use href="#${name}"/></svg>`;
-  const logo = (item) => `<img src="assets/${item.logo}" alt="">`;
-  const poster = 'assets/hero/streetwear-edit.jpg';
-  const capture = (item) => `<img src="${item.page || item.post ? 'assets/hero/' + (item.page || item.post) : poster}" alt="" draggable="false">`;
-  const linq = '<img src="assets/current/linq-icon.png" alt="">';
+  const logo = (item) => `<img src="${new URL(item.logo, landingAssets)}" alt="">`;
+  const poster = new URL('hero/streetwear-edit.jpg', landingAssets);
+  const capture = (item) => `<img src="${item.page || item.post ? new URL('hero/' + (item.page || item.post), landingAssets) : poster}" alt="" draggable="false">`;
+  const linq = `<img src="${new URL('current/linq-icon.png', landingAssets)}" alt="">`;
   const glyphs = {
     home: 'M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z',
     heart: 'M12 21 4.1 13a5 5 0 0 1 7.9-6 5 5 0 0 1 7.9 6z',
@@ -78,7 +80,7 @@ function initializeDemo(stage) {
     ...apps.filter(item => item.recording).map(item => [item.id, item.recording]),
   ].map(([id, filename]) => {
     const video = document.createElement('video');
-    video.src = 'assets/hero/' + filename;
+    video.src = new URL('hero/' + filename, landingAssets);
     video.muted = true;
     video.defaultMuted = true;
     video.loop = true;

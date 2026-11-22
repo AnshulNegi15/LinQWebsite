@@ -1,3 +1,4 @@
+import { resolve } from 'node:path'
 import react from '@vitejs/plugin-react'
 import { defineConfig, loadEnv } from 'vite'
 
@@ -44,7 +45,30 @@ const localApi = {
   },
 };
 
+function configureAdminEntry(server) {
+  server.middlewares.use((req, _res, next) => {
+    const url = new URL(req.url, 'http://127.0.0.1');
+    if (/^\/admin(?:\/|$)/.test(url.pathname)) {
+      req.url = '/admin/index.html' + url.search;
+    }
+    next();
+  });
+}
+
+const adminEntry = {
+  name: 'linq-admin-entry',
+  configureServer: configureAdminEntry,
+  configurePreviewServer: configureAdminEntry,
+};
+
 export default defineConfig({
-  plugins: [react(), localApi],
+  plugins: [react(), localApi, adminEntry],
+  build: {
+    rolldownOptions: {
+      input: ['index.html', 'admin/index.html', 'privacy/index.html', 'terms/index.html'].map(
+        entry => resolve(import.meta.dirname, entry),
+      ),
+    },
+  },
   server: { host: '127.0.0.1', strictPort: true },
 });
