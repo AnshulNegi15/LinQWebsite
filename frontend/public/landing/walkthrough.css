@@ -1,0 +1,68 @@
+:root { --page-mist:#f5f7fc; --text-dark:#101724; }
+body, main { background:var(--page-mist); }
+.share-hero { background-color:var(--page-mist); }
+.share-hero::after { background:linear-gradient(transparent,var(--page-mist)); }
+.tour { padding-block:clamp(56px,8vw,125px); }
+.tour h2,.tour-copy h3,.tour-faq h2 { color:var(--text-dark); font-family:Geist,sans-serif; font-weight:530; letter-spacing:-.065em; line-height:1.02; }
+.tour h2 { text-align:center; font-size:clamp(42px,5.6vw,88px); margin-bottom:clamp(42px,6vw,100px); }
+.tour-row { display:grid; grid-template-columns:1fr 1.15fr; gap:clamp(40px,7vw,110px); align-items:center; }
+.tour-row + .tour-row { margin-top:clamp(56px,8vw,125px); }
+.tour-row:nth-of-type(even) { grid-template-columns:1.15fr 1fr; }
+.tour-row:nth-of-type(even) .tour-copy { order:2; }
+.tour-copy small { font-size:14px; color:#344f98; font-weight:600; }
+.tour-copy h3 { font-size:clamp(40px,4.6vw,72px); margin:16px 0 23px; max-width:12ch; }
+.tour-copy mark { background:none; color:#294ec1; }
+.tour-copy p,.faq-answer p { font-size:clamp(16px,1.3vw,20px); line-height:1.58; color:#46536a; max-width:38ch; }
+.tour-art { position:relative; isolation:isolate; border-radius:clamp(18px,2vw,30px); aspect-ratio:1.13; margin:0; overflow:hidden; display:grid; place-items:center; }
+.capture-art { background:radial-gradient(ellipse at 0% 15%,#7ef3ff,transparent 68%),linear-gradient(140deg,#14b9ed,#3154de 69%,#152a87); }
+.organize-art { background:radial-gradient(ellipse at 15% 8%,#ffc8fc,transparent 57%),linear-gradient(145deg,#dd68f2,#9050ed 55%,#37349b); }
+.recall-art { background:radial-gradient(ellipse at 88% 8%,#80fbec,transparent 54%),linear-gradient(135deg,#14bcd5,#187ccb 52%,#153d9b); }
+.tour-art::before { content:""; position:absolute; inset:0; background:url("assets/fine-grain.svg"); opacity:.29; pointer-events:none; }
+.tour-art { container-type:inline-size; }
+.tour-art img { display:block; width:100%; height:auto; }
+.device-fragment { position:absolute; overflow:hidden; background:white; border:4px solid #20232a; border-radius:12% / 7%; box-shadow:0 20px 54px #14215335; }
+.save-fragment { width:76%; left:9%; top:-23%; border-radius:0 0 30px 30px; padding-bottom:21%; background:#101010; }
+.lift { position:absolute; filter:drop-shadow(0 12px 15px #182d5333); }
+.tour-art .share-lift { width:58%; right:8%; bottom:-5%; border-radius:12%; }
+.folder-fragment { top:-8%; width:69%; left:8%; padding:13% 4% 8%; border-radius:0 0 26px 26px; text-align:center; }
+.fragment-handle { width:14%; height:3px; border-radius:5px; margin:0 auto 5%; background:#c5c9cf; }
+.folder-fragment b,.picked-video { font-size:3.2cqw; }
+.picked-video { margin:6% 0 1%; display:flex; gap:5%; align-items:center; text-align:left; }
+.picked-video img { width:26%; aspect-ratio:1; object-fit:cover; border-radius:8px; }
+.tour-art .picker-lift { width:77%; left:13%; top:41%; border-radius:12px; }
+.tour-art .folder-lift { position:absolute; width:31%; bottom:-3%; right:9%; border-radius:14%; box-shadow:0 14px 28px #33254c40; }
+.search-film { width:119%; position:absolute; top:11%; overflow:hidden; border-block:5px solid #f0f6ff; }
+.recall-art .query-lift { left:8%; right:8%; bottom:15%; padding:4% 5%; display:flex; align-items:center; gap:4%; border-radius:999px; background:white; color:#192943; font:520 3.7cqw/1.2 Geist,sans-serif; }
+.query-lift svg { width:4.5cqw; height:4.5cqw; }
+.spaces-art { background:radial-gradient(at 90% 85%,#a7dcff,transparent 58%),linear-gradient(130deg,#295ee2,#5b99ff 50%,#8edbf1); }
+.spaces-fragment { width:70%; left:9%; top:14%; border-radius:13% 13% 0 0 / 7% 7% 0 0; }
+.space-lift { right:6%; top:42%; width:36%; border-radius:12%; overflow:hidden; }
+.tour-faq { display:grid; grid-template-columns:.85fr 1.2fr; gap:clamp(28px,6vw,88px); border-top:1px solid #ccd5e3; padding-block:clamp(56px,7vw,105px); }
+.tour-faq h2 { font-size:clamp(42px,4.7vw,70px); max-width:10ch; }
+.tour-faq details { border-bottom:1px solid #cbd5e3; }
+.tour-faq summary { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:21px 0; list-style:none; cursor:pointer; color:#172137; font-size:clamp(17px,1.45vw,23px); font-weight:530; transition:color .22s; }
+.tour-faq summary::-webkit-details-marker { display:none; }
+.tour-faq summary::after { content:"+"; flex:none; display:grid; place-items:center; width:32px; height:32px; border-radius:50%; color:#254cab; background:#e4eafa; transition:transform .35s,background .28s,color .28s; }
+.tour-faq details[open] summary { color:#254caf; }
+.tour-faq details[open] summary::after { transform:rotate(45deg); background:#294bc0; color:white; }
+.faq-answer p { max-width:50ch; padding:0 34px 24px 0; }
+.tour-faq details::details-content { overflow:hidden; block-size:0; opacity:0; interpolate-size:allow-keywords; transition:block-size .38s cubic-bezier(.25,.8,.25,1),opacity .26s,content-visibility .38s allow-discrete; }
+.tour-faq details[open]::details-content { block-size:auto; opacity:1; }
+.closing-footer { background:#e8edfb; color:#172443; border-top:1px solid #c8d3e8; }
+.footer-signature,.footer-links,.footer-links nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.footer-signature { padding:clamp(35px,5vw,80px) 0; border-bottom:1px solid #bac7dc; }
+.footer-signature a:first-child { display:flex; align-items:center; gap:.16em; font:570 clamp(66px,8vw,120px)/1 Geist,sans-serif; letter-spacing:-.075em; }
+.footer-signature img { width:.76em; border-radius:21%; }
+.top-arrow { display:grid; place-items:center; border-radius:50%; width:52px; height:52px; border:1px solid #899cbe; font-size:25px; }
+.footer-links { padding:24px 0 32px; flex-wrap:wrap; font-size:14px; }
+.footer-links button { background:transparent; color:inherit; text-decoration:underline; text-underline-offset:4px; }
+@media(max-width:700px) {
+ .tour-row,.tour-row:nth-of-type(even),.tour-faq { grid-template-columns:1fr; gap:24px; }
+ .tour-row:nth-of-type(even) .tour-copy { order:0; }
+ .tour-copy h3,.tour-faq h2 { max-width:18ch; }
+ .footer-links nav { gap:14px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .tour-faq details::details-content,.tour-faq summary,.tour-faq summary::after { transition:none; }
+}
+.motion-paused .tour-faq details::details-content,.motion-paused .tour-faq summary::after { transition:none; }

@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="84" height="94" viewBox="0 0 84 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Intake &#194;&#183; Speed trails" clip-path="url(#clip0_0_26)">
+<path id="Vector" d="M14 4V69M42 22V84M70 0V60" stroke-width="2.5" stroke-linecap="round" stroke="url(#paint0_linear_0_26)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_26" x1="14" y1="0" x2="14" y2="84" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5B8DC9" stop-opacity="0"/>
+<stop offset="1" stop-color="#5B8DC9" stop-opacity="0.7"/>
+</linearGradient>
+<clipPath id="clip0_0_26">
+<rect width="84" height="94" fill="white"/>
+</clipPath>
+</defs>
+</svg>
