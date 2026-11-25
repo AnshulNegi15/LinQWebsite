@@ -2,21 +2,17 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 const path = window.location.pathname
-const isAdmin = /^\/admin(?:\/|$)/.test(path)
-const goHome = () => window.location.assign('/')
-let Screen
-if (isAdmin) {
-  Screen = (await import('./admin/Admin.jsx')).default
-} else {
-  const legalPage = /^\/terms(?:\/|$)/.test(path)
-    ? import('./components/TermsOfUse.jsx')
-    : import('./components/PrivacyPolicy.jsx')
-  const [legalModule] = await Promise.all([legalPage, import('./index.css'), import('./App.css')])
-  Screen = legalModule.default
-}
+const root = createRoot(document.getElementById('root'))
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    {isAdmin ? <Screen /> : <main><Screen onBack={goHome} /></main>}
-  </StrictMode>,
-)
+if (/^\/admin(?:\/|$)/.test(path)) {
+  const { default: Admin } = await import('./admin/Admin.jsx')
+  root.render(<StrictMode><Admin /></StrictMode>)
+} else {
+  const isTerms = /^\/terms(?:\/|$)/.test(path)
+  const [{ default: LegalPage }, { default: policy }] = await Promise.all([
+    import('./legal/LegalPage.jsx'),
+    isTerms ? import('./legal/terms.json') : import('./legal/privacy.json'),
+  ])
+
+  root.render(<StrictMode><LegalPage policy={policy} isTerms={isTerms} /></StrictMode>)
+}

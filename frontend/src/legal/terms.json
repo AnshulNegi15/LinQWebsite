@@ -1,0 +1,757 @@
+{
+  "title": "Terms of Use",
+  "metadata": [],
+  "sections": [
+    {
+      "id": "acceptance-of-terms",
+      "heading": "1. Acceptance of Terms",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Acceptance of Terms These Terms of Use (\" Terms \") form a legally binding agreement between you (\" you \" or \" User \") and LinQ, operating the LinQ application (\" LinQ \", \" we \", \" us \" or \" our \"). They govern your access to and use of the LinQ mobile application, website and related features and services (collectively, the \" Service \"). By downloading, installing, accessing or using the Service, you confirm that you have read and understood these Terms and agree to them and to our Privacy Policy, which is incorporated by reference. If you do not agree, do not access or use the Service. We may update these Terms. For material changes, we will provide reasonable advance notice through the App, our website or another appropriate channel where practicable and as required by law. The updated Terms will state their effective date. Where applicable law requires renewed consent, we will obtain it. Continued use after the effective date may constitute acceptance only to the extent permitted by applicable law."
+        }
+      ]
+    },
+    {
+      "id": "eligibility",
+      "heading": "2. Eligibility",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To use the App, you must:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Be at least 18 years of age.",
+            "Be legally capable of entering into a binding agreement.",
+            "Not be prohibited from using the App under applicable law."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "If you use the App on behalf of an organisation or other legal entity, you represent and warrant that you have authority to bind that organisation or entity to these Terms."
+        }
+      ]
+    },
+    {
+      "id": "account-registration-and-security",
+      "heading": "3. Account Registration and Security",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "3.1 Account Creation"
+        },
+        {
+          "type": "text",
+          "text": "Certain features of LinQ require an account. Depending on availability, you may create an account using:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Email and password;",
+            "Sign in with Apple; or",
+            "Sign in with Google."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "By creating an account and using LinQ, you agree to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provide accurate and current information.",
+            "Maintain the accuracy of your account information.",
+            "Keep your authentication credentials secure.",
+            "Not share your account credentials with unauthorised persons.",
+            "Notify us promptly if you believe your account has been accessed or used without authorisation."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "You are responsible for activity conducted through your account, except to the extent that applicable law provides otherwise. Authentication and account information may be processed through third-party authentication and infrastructure services used to operate LinQ, as described in our Privacy Policy. Third-party authentication is provided subject to the relevant provider‘s terms and availability. If a provider changes, suspends or discontinues its service, some sign - in functionality may be affected. You are responsible for maintaining access to the authentication method associated with your LinQ account."
+        },
+        {
+          "type": "heading",
+          "text": "3.2 Guest Mode"
+        },
+        {
+          "type": "text",
+          "text": "LinQ may allow you limited use to certain features without creating an account through Guest Mode. In Guest Mode:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your saved content is primarily maintained on your device for use within the Guest Mode experience.",
+            "Guest Mode does not provide the same cloud synchronisation and Collaborative Space functionality available to registered users holding an account.",
+            "Saved URLs may be transmitted to LinQ's servers for processing, including retrieving publicly available information from linked websites and generating AI-assisted summaries.",
+            "Search embeddings are generated and maintained locally on your device and are not uploaded to or stored in LinQ's Supabase database.",
+            "Local data may be permanently lost if you uninstall the App, reset your device, lose access to the device, or otherwise delete the locally stored data.",
+            "Guest Mode data does not automatically transfer to a new device unless the applicable feature expressly provides for such transfer. Before using such a feature, review any merge, overwrite or replacement warning displayed in the App. You are responsible for keeping independent copies of information that is important to you."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "You are responsible for maintaining any important information stored through Guest Mode."
+        }
+      ]
+    },
+    {
+      "id": "description-of-service",
+      "heading": "4. Description of Service",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ is an intelligent content management application that enables you to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Save and organise web content, including URLs, articles, videos, and other online resources.",
+            "Save content from supported iOS applications using the Share Extension.",
+            "Organise saved content using tags, categories, collections, and related features.",
+            "Use artificial intelligence and machine-learning technologies to generate or support summaries, tags, categories, semantic search, and other intelligent organisation features. Certain processing may occur through LinQ's backend infrastructure and third-party AI services, while search embeddings are generated locally on your device.",
+            "Search saved content using keyword and semantic search capabilities.",
+            "Set time-based reminders for saved content.",
+            "Create and participate in Collaborative Spaces for shared content management.",
+            "Synchronise supported content and account information through LinQ's cloud infrastructure.",
+            "Use other features that LinQ may introduce, modify, or discontinue from time to time."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Features may change, be limited, or become unavailable with newer versions. Descriptions of features in these Terms do not guarantee that a feature will be available on every device, account or version."
+        }
+      ]
+    },
+    {
+      "id": "license-and-permitted-use",
+      "heading": "5. License and Permitted Use",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Subject to these Terms, LinQ grants you a limited, non-exclusive, non-transferable, revocable license to access and use the App for lawful personal, educational, professional, or internal business purposes. You may not use the App in a manner that violates these Terms or applicable law. Except for the rights expressly granted under these Terms, no rights in or to the App are transferred to you."
+        }
+      ]
+    },
+    {
+      "id": "prohibited-conduct",
+      "heading": "6. Prohibited Conduct",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You agree not to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use the App and services for any unlawful, harmful, fraudulent, or unauthorised purpose.",
+            "Violate any applicable local, state, national, or international law or regulation.",
+            "Use the App to distribute or facilitate unlawful, threatening, harassing, hateful, or otherwise prohibited material.",
+            "Use Collaborative Spaces to distribute content that violates these Terms or applicable law.",
+            "Infringe or violate the intellectual property, privacy, publicity, or other rights of any person or entity.",
+            "Upload or transmit viruses, malware, malicious code, or other harmful software.",
+            "Attempt to gain unauthorised access to the App, other accounts, or systems or networks connected to the App.",
+            "Interfere with or disrupt the integrity, performance, availability, or security of the App or its related services.",
+            "Use Collaborative Spaces to send unsolicited communications, spam, or unauthorised promotional material.",
+            "Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App, except to the extent such restriction is prohibited by applicable law.",
+            "Use automated scripts, bots, crawlers, scrapers, or similar methods to access or interact with LinQ's systems or services without our prior written authorisation, except for automated processing performed by LinQ as part of its intended features.",
+            "Impersonate another person or entity or falsely represent your affiliation with another person or entity.",
+            "Circumvent, disable, or interfere with security or access-control features of the App.",
+            "Resell, redistribute, sublicense, or commercially exploit the App or any part of it without our authorisation.",
+            "Use the App to facilitate abuse, fraud, or unauthorised access to third-party systems or services."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Violation of these restrictions may result in suspension or termination of your access to the App and may subject you to legal liability."
+        }
+      ]
+    },
+    {
+      "id": "intellectual-property-rights",
+      "heading": "7. Intellectual Property Rights",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "7.1 Our Intellectual Property"
+        },
+        {
+          "type": "text",
+          "text": "The App, including its software, design, user interface, graphics, logos, trademarks, features, functionality, and other original materials provided by LinQ, is owned by or licensed to LinQ and is protected by applicable intellectual property laws. These Terms do not grant you ownership of the App or any of LinQ's intellectual property."
+        },
+        {
+          "type": "heading",
+          "text": "7.2 Trademarks"
+        },
+        {
+          "type": "text",
+          "text": "\"LinQ\" and related names, logos, designs, and product identifiers are owned by or used by LinQ and may be protected by applicable trademark laws. You may not use LinQ's trademarks, logos, or branding without prior written authorisation."
+        }
+      ]
+    },
+    {
+      "id": "user-content",
+      "heading": "8. User Content",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "8.1 Your Content"
+        },
+        {
+          "type": "text",
+          "text": "\"User Content\" means information or content that you save, create, upload, organise, or share through the App, including bookmarks, URLs, tags, categories, collection names, notes, and content associated with Collaborative Spaces. You retain ownership of your User Content. To operate LinQ, you grant us a limited, non-exclusive, worldwide, royalty-free license to host, store, transmit, process, reproduce where technically necessary, and display your User Content solely as reasonably necessary to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provide and operate the App;",
+            "Synchronise your content across supported devices;",
+            "Provide search, organisation, semantic search, embedding, AI-assisted, and other requested features;",
+            "Display content to you;",
+            "Display content to members of a Collaborative Space when you choose to share it;",
+            "Maintain, secure, troubleshoot, and improve the functionality of the App."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "We do not acquire ownership of your User Content through this license. This license ends when your User Content is deleted or your account is deleted, except to the extent that continued retention or processing is required for legal, security, backup, fraud- prevention, or other legitimate operational purposes described in our Privacy Policy."
+        },
+        {
+          "type": "heading",
+          "text": "8.2 Content Responsibility"
+        },
+        {
+          "type": "text",
+          "text": "You are responsible for your User Content and the consequences of saving, sharing, or transmitting it through LinQ. You represent and warrant that:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You have the necessary rights or authorisation to save and share the content you submit.",
+            "Your use of User Content through LinQ does not knowingly infringe third-party intellectual property, privacy, publicity, or other rights.",
+            "Your User Content and use of the App comply with these Terms and applicable law."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "8.3 Third-Party Content and Processing"
+        },
+        {
+          "type": "text",
+          "text": "When you save a link, LinQ may retrieve and process publicly available information associated with that link to provide features such as previews and AI-assisted summaries."
+        },
+        {
+          "type": "text",
+          "text": "The underlying third-party content remains subject to the intellectual property rights and applicable terms of its respective owners. Saving a link or generating a summary does not transfer ownership of that content to you or LinQ."
+        },
+        {
+          "type": "text",
+          "text": "You are responsible for ensuring that your use of saved, shared, or otherwise submitted content complies with applicable law and does not knowingly infringe the rights of third parties. LinQ does not claim ownership of third-party content retrieved through its link-processing functionality."
+        },
+        {
+          "type": "heading",
+          "text": "8.4 Content Removal"
+        },
+        {
+          "type": "text",
+          "text": "We may remove, restrict, or disable access to User Content or Collaborative Spaces when reasonably necessary to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Comply with applicable law or legal requests;",
+            "Enforce these Terms;",
+            "Protect users, LinQ, or third parties;",
+            "Address security, abuse, or fraud;",
+            "Respond to valid reports or complaints."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "We do not represent that we routinely review all private User Content."
+        }
+      ]
+    },
+    {
+      "id": "collaborative-spaces",
+      "heading": "9. Collaborative Spaces",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "9.1 Creation and Ownership"
+        },
+        {
+          "type": "text",
+          "text": "Collaborative Spaces allow users to organise and share content with other LinQ users. The user who creates a Collaborative Space is its owner and is responsible for managing membership and activity within the Space. A Collaborative Space cannot be manually deleted by its owner. A Collaborative Space is automatically removed when its last remaining member leaves the Space."
+        },
+        {
+          "type": "heading",
+          "text": "9.2 Member Management"
+        },
+        {
+          "type": "text",
+          "text": "Only the Space owner may remove members from a Collaborative Space. Members may leave a Collaborative Space at any time. When a member leaves a Space, content that the member previously contributed to that Space remains within the Space and may continue to be accessible to the remaining members, subject to the functionality and policies of the App."
+        },
+        {
+          "type": "heading",
+          "text": "9.3 Shared Content"
+        },
+        {
+          "type": "text",
+          "text": "Content shared within a Collaborative Space may be visible to and accessible by other members of that Space. By sharing content in a Collaborative Space, you acknowledge that other members may view, interact with, copy, or otherwise use that content. You should only share content that you are authorized to share and that you are comfortable making available to the members of that Space. LinQ is not responsible for how other members use or redistribute content that you choose to share with them, except to the extent required by applicable law."
+        },
+        {
+          "type": "heading",
+          "text": "9.4 Space Rules"
+        },
+        {
+          "type": "text",
+          "text": "Space owners and members must use Collaborative Spaces in accordance with these Terms. We may restrict, suspend, or disable a Collaborative Space or member access when reasonably necessary to enforce these Terms, comply with law, protect users, or address security or abuse."
+        }
+      ]
+    },
+    {
+      "id": "third-party-content-and-links",
+      "heading": "10. Third-Party Content and Links",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ allows you to save and organize links to websites and content operated by third parties. LinQ does not own, control, or endorse third-party websites or content merely because you save or access a link through the App. We are not responsible for:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The accuracy, legality, availability, or appropriateness of third-party content.",
+            "Changes to or removal of third-party webpages.",
+            "Transactions or interactions between you and third-party services.",
+            "The terms, privacy practices, or security practices of third-party websites.",
+            "Losses resulting from your access to or use of third-party content."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Your interactions with third-party websites and services are governed by their respective terms of service and privacy policies. Saving a link through LinQ does not grant you ownership of the underlying third-party content."
+        },
+        {
+          "type": "text",
+          "text": "Certain LinQ features may automatically retrieve publicly available information from third-party websites associated with links you choose to save. This processing is performed to provide features such as link previews and AI-assisted summaries. Such retrieval does not imply that LinQ owns, endorses, or controls the underlying third-party content. The availability of these features may depend on the accessibility, technical restrictions, and terms of the relevant website."
+        }
+      ]
+    },
+    {
+      "id": "ai-and-machine-learning-features",
+      "heading": "11. AI and Machine-Learning Features",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ uses artificial intelligence and machine-learning technologies, including services and models provided by NVIDIA Neotron and Google Gemini, to support certain features of the App. These features may include, depending on the functionality available:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Semantic search;",
+            "Embedding generation;",
+            "Content categorization;",
+            "Tag suggestions;",
+            "Summaries;",
+            "Other intelligent organization features."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "11.1 URL Processing"
+        },
+        {
+          "type": "text",
+          "text": "When you save a URL, LinQ may transmit that URL to LinQ's servers for processing. The URL is processed for purposes including generating embeddings and providing LinQ's AI- powered and semantic-search functionality. URLs submitted for this processing are not intended to contain personal information. You should avoid intentionally placing sensitive personal information in URLs saved through LinQ."
+        },
+        {
+          "type": "heading",
+          "text": "11.2 AI Limitations"
+        },
+        {
+          "type": "text",
+          "text": "AI-generated or AI-assisted results may be incomplete, inaccurate, outdated, or inappropriate. You are responsible for reviewing AI-generated tags, summaries, categories, search results, and other AI-assisted output before relying on them. LinQ does not guarantee that AI-generated content will be accurate, complete, reliable, or suitable for any particular purpose."
+        },
+        {
+          "type": "heading",
+          "text": "11.3 AI Model Training"
+        },
+        {
+          "type": "text",
+          "text": "User URLs processed for LinQ's embedding and AI functionality are not intentionally used by LinQ to train general-purpose AI models. This does not prevent third-party service providers from processing data as necessary to provide the services used by LinQ, subject to their applicable agreements and privacy practices. Additional information about data processing is provided in our Privacy Policy."
+        }
+      ]
+    },
+    {
+      "id": "push-notifications",
+      "heading": "12. Push Notifications",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ may send push notifications for purposes including:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Content reminders you have scheduled;",
+            "Collaborative Space activity;",
+            "New members joining a Space;",
+            "New content shared within a Space;",
+            "Invitations to join Collaborative Spaces;",
+            "Important service-related announcements."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "You can manage notification permissions and preferences through the App and your iOS device settings, where supported. Some service-related communications may be necessary for the operation or security of the App."
+        }
+      ]
+    },
+    {
+      "id": "service-availability-and-changes",
+      "heading": "13. Service Availability and Changes",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ is continuously developed and may change over time. We may, at our discretion:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Add new features;",
+            "Modify existing features;",
+            "Remove or discontinue features;",
+            "Change technical requirements;",
+            "Change supported iOS versions;",
+            "Suspend portions of the service;",
+            "Discontinue the App or related services."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "We will make reasonable efforts to provide notice of material changes where required by applicable law. We do not guarantee that any particular feature will remain available indefinitely."
+        }
+      ]
+    },
+    {
+      "id": "disclaimers",
+      "heading": "14. Disclaimers",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "14.1 \"As Is\" Basis"
+        },
+        {
+          "type": "text",
+          "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE APP IS PROVIDED ON AN \"AS IS\" AND \"AS AVAILABLE\" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM WARRANTIES INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON- INFRINGEMENT."
+        },
+        {
+          "type": "heading",
+          "text": "14.2 No Guarantee of Availability"
+        },
+        {
+          "type": "text",
+          "text": "We do not warrant that:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The App will always be available or uninterrupted.",
+            "The App will be secure or error-free.",
+            "The results obtained through the App will always be accurate or reliable.",
+            "Defects will always be corrected.",
+            "The App will be compatible with every device or version of iOS.",
+            "Cloud synchronization or other network-dependent functionality will always operate without interruption."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "14.3 Data Loss"
+        },
+        {
+          "type": "text",
+          "text": "Although we implement reasonable measures designed to protect user data, no digital service can guarantee that data will never be lost, corrupted, unavailable, or accessed without authorization. You are responsible for maintaining appropriate copies of important information. This is particularly important when using Guest Mode or any feature that stores information locally on your device."
+        }
+      ]
+    },
+    {
+      "id": "limitation-of-liability",
+      "heading": "15. Limitation of Liability",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LINQ AND ITS DEVELOPERS, OFFICERS, EMPLOYEES, CONTRACTORS, AGENTS, AND AFFILIATES WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS, GOODWILL, DATA, OR OTHER INTANGIBLE LOSSES ARISING FROM OR RELATED TO:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your use of or inability to use the App;",
+            "Unauthorized access to your account or data;",
+            "User Content;",
+            "Content shared through Collaborative Spaces;",
+            "Third-party websites or services;",
+            "Interruption or termination of the App;",
+            "Bugs, errors, malware, or other harmful code;",
+            "Loss or corruption of data;",
+            "AI-generated or AI-assisted content;",
+            "Any other matter relating to the App."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LINQ'S TOTAL LIABILITY FOR CLAIMS ARISING OUT OF OR RELATING TO THE APP OR THESE TERMS WILL NOT EXCEED THE GREATER OF:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "THE AMOUNT YOU PAID TO LINQ FOR THE APP OR RELEVANT SERVICES DURING THE TWELVE (12) MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM; OR",
+            "THE MINIMUM AMOUNT REQUIRED BY APPLICABLE LAW."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Nothing in these Terms excludes or limits liability that cannot legally be excluded or limited under applicable law."
+        }
+      ]
+    },
+    {
+      "id": "indemnification",
+      "heading": "16. Indemnification",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "To the extent permitted by applicable law, you agree to indemnify and hold harmless LinQ and its developers, officers, employees, contractors, agents, and affiliates from claims, liabilities, damages, losses, costs, and reasonable expenses arising from:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your violation of these Terms;",
+            "Your unlawful use of the App;",
+            "Your User Content;",
+            "Content you share through Collaborative Spaces;",
+            "Your violation of third-party rights; or",
+            "Your misuse of the App."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "This section does not require you to indemnify LinQ for claims caused by LinQ's own unlawful conduct or other circumstances where such indemnification would be prohibited by applicable law."
+        }
+      ]
+    },
+    {
+      "id": "termination-and-account-deletion",
+      "heading": "17. Termination and Account Deletion",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "17.1 Termination by You"
+        },
+        {
+          "type": "text",
+          "text": "You may stop using LinQ at any time. Registered users may delete their LinQ account using the account-deletion functionality available within the App. Deleting the App from your device does not necessarily delete your LinQ account or cloud-stored data."
+        },
+        {
+          "type": "heading",
+          "text": "17.2 Termination by Us"
+        },
+        {
+          "type": "text",
+          "text": "We may suspend or terminate your account or access to LinQ where reasonably necessary, including if:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "You materially violate these Terms;",
+            "You engage in fraudulent, abusive, or unlawful activity;",
+            "Your use presents a security or safety risk;",
+            "We are legally required to do so;",
+            "Your account is used to harm other users or LinQ; or",
+            "We discontinue the relevant service."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Where reasonably practicable and legally permitted, we may provide notice before termination or suspension."
+        },
+        {
+          "type": "heading",
+          "text": "17.3 Effect of Termination"
+        },
+        {
+          "type": "text",
+          "text": "Upon termination:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Your right to use the App ceases.",
+            "Access to account-based features may be disabled.",
+            "Your data may be deleted in accordance with our Privacy Policy and applicable retention requirements.",
+            "Content already shared within a Collaborative Space may remain accessible to other members in accordance with the functionality of the Space and these Terms."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "Provisions that by their nature should survive termination will continue to apply, including provisions relating to intellectual property, User Content, disclaimers, limitations of liability, indemnification, and dispute resolution."
+        }
+      ]
+    },
+    {
+      "id": "governing-law-and-dispute-resolution",
+      "heading": "18. Governing Law and Dispute Resolution",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "18.1 Governing Law"
+        },
+        {
+          "type": "text",
+          "text": "These Terms shall be governed by and interpreted in accordance with the laws of India, without regard to conflict-of-law principles, except where applicable law requires otherwise."
+        },
+        {
+          "type": "heading",
+          "text": "18.2 Dispute Resolution"
+        },
+        {
+          "type": "text",
+          "text": "If a dispute arises between you and LinQ relating to these Terms or the App, the parties should first attempt to resolve the dispute in good faith. If the dispute cannot be resolved through good-faith discussions, either party may seek relief from a court of competent jurisdiction, subject to applicable law. To the extent permitted by applicable law, courts having jurisdiction in Dehradun, Uttarakhand, India, shall have jurisdiction over disputes arising from these Terms. Nothing in this section limits any mandatory consumer rights or remedies available to you under applicable law."
+        },
+        {
+          "type": "heading",
+          "text": "18.3 Individual Claims"
+        },
+        {
+          "type": "text",
+          "text": "To the extent permitted by applicable law, claims relating to your individual use of the App should be brought on an individual basis rather than as part of a class, collective, consolidated, or representative action."
+        }
+      ]
+    },
+    {
+      "id": "apple-app-store-additional-terms",
+      "heading": "19. Apple App Store Additional Terms",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "If you downloaded LinQ from the Apple App Store, the following terms apply:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "These Terms are between you and LinQ, and not with Apple Inc. (\"Apple\").",
+            "LinQ, and not Apple, is responsible for the App and its content.",
+            "Your use of the App must comply with the applicable Apple App Store Terms of Service.",
+            "Apple has no obligation to provide maintenance or support services for the App.",
+            "To the extent required under applicable law, Apple may have refund obligations regarding the App or purchases made through Apple's payment systems.",
+            "Apple is not responsible for addressing claims relating to the App, including product liability claims, claims that the App fails to comply with applicable legal requirements, or claims arising under consumer protection laws.",
+            "In the event of a third-party claim that the App or your possession and use of the App infringes that third party's intellectual property rights, LinQ, and not Apple, will be responsible for the investigation, defense, settlement, and resolution of that claim to the extent required by Apple's applicable terms.",
+            "Apple and its subsidiaries are third-party beneficiaries of these Terms and, upon your acceptance of these Terms, Apple will have the right to enforce these Terms against you as a third-party beneficiary.",
+            "You represent that you are not located in a country subject to applicable U.S. Government embargoes and are not listed on applicable U.S. Government restricted-party lists, to the extent required by Apple's applicable terms."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paid-features-and-future-pricing",
+      "heading": "20. Paid Features and Future Pricing",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ may initially provide certain functionality free of charge and may impose usage limits on free access. In the future, LinQ may introduce paid features, subscriptions, usage-based pricing, or other paid services. If paid services are introduced:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Applicable pricing will be presented before you are charged.",
+            "Any subscription or purchase will be subject to the applicable purchase terms.",
+            "Purchases made through the Apple App Store may be subject to Apple's payment, subscription, refund, and cancellation terms.",
+            "We will provide any notices required by applicable law before introducing or materially changing paid services."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "The introduction of paid features does not automatically make previously free functionality paid unless we clearly communicate the applicable change."
+        }
+      ]
+    },
+    {
+      "id": "general-provisions",
+      "heading": "21. General Provisions",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "21.1 Entire Agreement"
+        },
+        {
+          "type": "text",
+          "text": "These Terms, together with our Privacy Policy and any additional terms specifically applicable to particular features, constitute the entire agreement between you and LinQ regarding your use of the App and supersede prior agreements relating to the same subject matter."
+        },
+        {
+          "type": "heading",
+          "text": "21.2 Severability"
+        },
+        {
+          "type": "text",
+          "text": "If any provision of these Terms is found to be unlawful, invalid, or unenforceable, that provision will be enforced to the maximum extent permitted by law, and the remaining provisions will remain in effect."
+        },
+        {
+          "type": "heading",
+          "text": "21.3 Waiver"
+        },
+        {
+          "type": "text",
+          "text": "Our failure to enforce any right or provision of these Terms does not constitute a waiver of that right or provision."
+        },
+        {
+          "type": "heading",
+          "text": "21.4 Assignment"
+        },
+        {
+          "type": "text",
+          "text": "You may not assign or transfer your rights or obligations under these Terms without our prior written consent, except where permitted by applicable law. We may assign or transfer our rights and obligations under these Terms in connection with a merger, acquisition, restructuring, sale of assets, or similar transaction."
+        },
+        {
+          "type": "heading",
+          "text": "21.5 Force Majeure"
+        },
+        {
+          "type": "text",
+          "text": "LinQ will not be responsible for delays or failures caused by circumstances beyond our reasonable control, including natural disasters, war, terrorism, government actions, power failures, internet or telecommunications failures, cyber incidents, infrastructure failures, or outages of third- party services."
+        }
+      ]
+    },
+    {
+      "id": "contact-us",
+      "heading": "22. Contact Us",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "If you have questions, concerns, requests, or feedback regarding these Terms, please contact us: LinQ — Legal"
+        },
+        {
+          "type": "text",
+          "text": "Email: support@trylinq.tech"
+        },
+        {
+          "type": "text",
+          "text": "Website: https://trylinq.tech"
+        },
+        {
+          "type": "text",
+          "text": "Location: Dehradun, Uttarakhand, India"
+        },
+        {
+          "type": "text",
+          "text": "These Terms of Use are effective as of October 7, 2026."
+        }
+      ]
+    }
+  ],
+  "links": {
+    "support@trylinq.tech": "mailto:support@trylinq.tech",
+    "https://trylinq.tech": "https://trylinq.tech/"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "title": "Privacy Policy",
+  "metadata": [
+    "Last Updated: November 21, 2026",
+    "Effective Date: November 21, 2026"
+  ],
+  "sections": [
+    {
+      "id": "our-privacy-pledge",
+      "heading": "Our Privacy Pledge",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ was founded on the principle that your bookmark library reflects your personal thoughts, research, and interests. We do not sell your personal data, display advertisements, or inject affiliate redirects into your saved links. We collect and process only the information necessary to provide and maintain the service."
+        }
+      ]
+    },
+    {
+      "id": "our-privacy-philosophy",
+      "heading": "1. Our Privacy Philosophy",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "For LinQ (\"LinQ\", \"we\", \"us\", \"our\"), privacy is not an afterthought; It is our product foundation. Unlike free bookmarking services that monetise users by injecting affiliate redirects or analysing personal interests to serve targeted ads, LinQ is financed transparently through premium software."
+        }
+      ]
+    },
+    {
+      "id": "information-we-collect",
+      "heading": "2. Information We Collect",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "We collect only the minimum data necessary to deliver and sync your visual bookmark library:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Account Information: When you register or sign in to LinQ, we process information such as"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "your email address and account identifiers associated with your account. Authentication services, including credential verification and password management where applicable, are handled by Supabase Auth. LinQ does not directly collect or manage your account passwords."
+        },
+        {
+          "type": "list",
+          "items": [
+            "IP Address: We process your IP address to estimate your geographical region, such as your"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "country or region. For this purpose, your IP address may be shared with a third-party IP geolocation service. This information is used for regional identification and is not obtained through GPS or precise device location tracking. LinQ does not request precise GPS-based location from your device for this purpose."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Bookmark Data: URLs you explicitly save, page titles, user-defined tags, notes, thumbnails,"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "and organisational Spaces you create."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Technical Telemetry: We may collect diagnostic crash reports and device operating system"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "version (e.g. iOS 27) to ensure app stability and fix synchronisation bugs."
+        },
+        {
+          "type": "list",
+          "items": [
+            "What We Never Collect: LinQ does not monitor your general browsing activity or collect your"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "browsing history outside the links you explicitly choose to save. We process saved URLs and their associated metadata solely to provide bookmark management, preview functionality and AI-assisted summaries."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Information Retrieved from Saved Links: When you choose to save a link, LinQ may retrieve"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "publicly available information associated with that URL, including webpage text, titles, descriptions, and other available metadata. This information is retrieved from the linked website and is not necessarily information provided or authored by you."
+        },
+        {
+          "type": "list",
+          "items": [
+            "AI-Generated Information: LinQ may generate summaries from information retrieved from"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "saved links. These summaries are associated with your bookmarks and stored in our backend database. LinQ also generates embeddings locally on your device to support search feature. These embeddings are not uploaded to or stored in our Supabase database."
+        }
+      ]
+    },
+    {
+      "id": "how-we-use-your-information",
+      "heading": "3. How We Use Your Information",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "We use your information for the following operational purposes:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "To synchronise your bookmarks, collections, and Spaces in real-time across your authorised"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "devices."
+        },
+        {
+          "type": "list",
+          "items": [
+            "To fetch public OpenGraph metadata (title, description, thumbnail, and favicon) for URLs you"
+          ]
+        },
+        {
+          "type": "text",
+          "text": "clip."
+        },
+        {
+          "type": "list",
+          "items": [
+            "To authenticate your identity when accessing the LinQ mobile app or web platform.",
+            "To provide customer support and notify you of critical security or subscription updates."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "link-metadata-rich-previews",
+      "heading": "4. Link Metadata & Rich Previews",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "When you save a link, LinQ may retrieve publicly available information associated with that URL, such as its title, description, thumbnail, and favicon, to generate a bookmark preview. LinQ uses its backend infrastructure to retrieve publicly available information from the linked website. This information may be processed using third-party services to generate an AI-assisted summary."
+        },
+        {
+          "type": "text",
+          "text": "The generated summary is stored in LinQ's database and associated with your saved bookmark. LinQ does not intend to retain the original webpage content as part of this summarisation process. However, the retrieved information may be temporarily processed by our backend and the third-party services involved in generating the summary, in accordance with transformative fair use."
+        },
+        {
+          "type": "text",
+          "text": "These requests are initiated by the LinQ application on your device. The website receiving the request may process your IP address and other standard connection information in accordance with its own privacy policy."
+        },
+        {
+          "type": "text",
+          "text": "LinQ also generates embeddings locally on your device to support semantic search. These embeddings are not uploaded to or stored in our Supabase database. This processing is initiated by your action of saving a link or using a feature that requires it. LinQ does not monitor your general browsing activity."
+        }
+      ]
+    },
+    {
+      "id": "data-encryption-security",
+      "heading": "5. Data Encryption & Security",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "We implement rigorous defense-in-depth security standards:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "In Transit: Communications between LinQ and its backend services are transmitted over HTTPS using TLS encryption.",
+            "At Rest: LinQ uses Supabase for database and storage infrastructure. Supabase provides infrastructure-level security measures, including encryption of stored data. For further information, please refer to Supabase Security."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "third-party-services",
+      "heading": "6. Third-Party Services",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ relies on third-party service providers to operate certain aspects of the application. These providers may process information on our behalf as necessary to deliver their respective services."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Transactional Email: We use Resend SMTP for password reset mail delivery.",
+            "Database and Authentication: Supabase is used to provide database, authentication, and related backend infrastructure for LinQ.",
+            "IP Geolocation: We use ipwho.is to estimate the geographical region associated with an IP address. The IP address is transmitted to this service when a geolocation lookup is performed.",
+            "Authentication Providers: Where applicable, Apple and Google may process authentication information when you choose to sign in using their respective services.",
+            "External Websites: When you save a link, LinQ may send requests to the website associated with that URL to retrieve publicly available metadata. These websites may receive standard connection information, including your IP address, and process it under their own privacy policies.",
+            "Backend Hosting and Processing: We use Render to host and operate backend services that process saved links and support LinQ functionality. URLs and information retrieved from linked websites may be processed through this infrastructure.",
+            "AI Summarisation: We use Google's Gemini API to generate AI-assisted summaries from information retrieved from saved links. Relevant information retrieved from linked websites may be transmitted to Google's AI service for this purpose. Such processing is subject to Google's applicable terms and privacy practices."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "We share information with these providers only as necessary for the relevant functionality. Their processing of information is also subject to their respective privacy policies and applicable terms."
+        }
+      ]
+    },
+    {
+      "id": "local-storage",
+      "heading": "7. Local Storage",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The LinQ mobile application may store certain information locally on your device to support application functionality, maintain user preferences, and provide access to cached bookmark data."
+        },
+        {
+          "type": "text",
+          "text": "On the LinQ web platform, we may use essential browser storage mechanisms, such as session cookies and LocalStorage, to maintain authentication sessions and support application functionality."
+        },
+        {
+          "type": "text",
+          "text": "LinQ does not use advertising or retargeting cookies."
+        }
+      ]
+    },
+    {
+      "id": "your-privacy-rights",
+      "heading": "8. Your Privacy Rights",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Depending on your location and applicable privacy laws, you may have rights concerning the personal information we process."
+        },
+        {
+          "type": "text",
+          "text": "These rights may include:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Right to Access: You may request access to the personal information associated with your account, subject to applicable privacy laws.",
+            "Right to Rectification: Request correction of inaccurate personal information.",
+            "Right to Portability: You can export your entire bookmark library at any time in standard JSON, Markdown, or HTML formats.",
+            "Right to Erasure (Right to be Forgotten): Where applicable, you may request the deletion of your account and associated personal information through the application or by contacting us."
+          ]
+        },
+        {
+          "type": "text",
+          "text": "You may exercise available account-management and privacy options through the application or by contacting us at our designated privacy contact address. Additional rights may apply depending on your jurisdiction."
+        }
+      ]
+    },
+    {
+      "id": "data-retention-deletion",
+      "heading": "9. Data Retention & Deletion",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "When you delete your account, LinQ initiates the deletion of your account information and associated user-generated content from its active systems."
+        },
+        {
+          "type": "text",
+          "text": "Certain information may remain temporarily in infrastructure backups, system logs, or other retained records maintained by our service providers. Such information is subject to the respective retention and deletion practices of those providers and may not be immediately removed from backup systems."
+        },
+        {
+          "type": "text",
+          "text": "We retain information only for as long as necessary to provide our services, fulfil operational requirements, and comply with applicable legal obligations."
+        }
+      ]
+    },
+    {
+      "id": "international-data-transfers",
+      "heading": "10. International Data Transfers",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ uses third-party service providers that may process or store information in countries outside your country of residence. Where personal information is transferred internationally, we take steps to ensure that such transfers are handled in accordance with applicable data protection laws and appropriate safeguards."
+        }
+      ]
+    },
+    {
+      "id": "children-s-privacy",
+      "heading": "10. Children's Privacy",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "LinQ is not intended for individuals under the age of 18."
+        },
+        {
+          "type": "text",
+          "text": "We do not knowingly collect personal information from children. If we become aware that an account has been created by a child in violation of this policy, we will take appropriate steps to address the account and delete associated personal information where required."
+        }
+      ]
+    },
+    {
+      "id": "policy-updates",
+      "heading": "11. Policy Updates",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "We may periodically update this Privacy Policy to reflect changes in our services, data practices, or applicable legal requirements. When material changes are made, we will provide appropriate notice through the application, our website, or other suitable communication channels. The updated policy will indicate the date on which it was last revised."
+        }
+      ]
+    },
+    {
+      "id": "contact-us",
+      "heading": "12. Contact Us",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "If you have questions, concerns, or requests regarding this Privacy Policy or the handling of your personal information, you may contact us at:"
+        },
+        {
+          "type": "text",
+          "text": "Email: support@trylinq.tech"
+        },
+        {
+          "type": "text",
+          "text": "For privacy-related requests, please include sufficient information for us to identify your account and respond to your inquiry."
+        }
+      ]
+    }
+  ],
+  "links": {
+    "Supabase Security.": "https://supabase.com/security",
+    "support@trylinq.tech": "mailto:support@trylinq.tech"
+  }
+}
