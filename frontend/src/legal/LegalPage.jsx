@@ -75,6 +75,7 @@ export default function LegalPage({ policy, isTerms }) {
 
       <footer className="legal-wrap legal-bottom">
         <a href="/">LinQ home</a>
+        <a href="/support/">Support</a>
         <a href={otherPage.url}>{otherPage.title}</a>
       </footer>
     </>
