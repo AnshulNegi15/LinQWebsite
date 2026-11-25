@@ -65,7 +65,7 @@ export default defineConfig({
   plugins: [react(), localApi, adminEntry],
   build: {
     rolldownOptions: {
-      input: ['index.html', 'admin/index.html', 'privacy/index.html', 'terms/index.html'].map(
+      input: ['index.html', 'admin/index.html', 'privacy/index.html', 'terms/index.html', 'support/index.html'].map(
         entry => resolve(import.meta.dirname, entry),
       ),
     },
